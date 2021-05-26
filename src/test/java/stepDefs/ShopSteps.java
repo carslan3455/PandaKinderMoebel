@@ -27,13 +27,13 @@ public class ShopSteps implements Locators {
 
     }
 
-    @Then("User should be able to navigate to Shop page")
-    public void userShouldBeAbleToNavigateToShopPage() {
+    @Then("User navigate to Shop page")
+    public void userNavigateToShopPage() {
         $(shopPage).click();
     }
 
-    @Then("User should be able to select random product type and product")
-    public void userShouldBeAbleToSelectRandomProductTypeAndProduct() {
+    @Then("User select random product type and product")
+    public void userSelectRandomProductTypeAndProduct() {
 
         int randomCtgry = randomSayi($$(categoryItem).size());
         $$(categoryItem).get(randomCtgry).click();
@@ -51,8 +51,8 @@ public class ShopSteps implements Locators {
 
     }
 
-    @Then("User should be able to  add to cart and check product info")
-    public void userShouldBeAbleToAddToCartAndCheckProductInfo() {
+    @Then("User add to cart and check product info")
+    public void userAddToCartAndCheckProductInfo() {
 
         $(cartTitle).shouldBe(Condition.appear).shouldHave(Condition.text(productName));
         $(cartAmount).shouldHave(Condition.text(productPrice));

@@ -12,8 +12,8 @@ import pages.Locators;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomePageAndRegSteps implements Locators {
-    @Given("User should be able to navigate to Pandakindermoebel home page")
-    public void userShouldBeAbleToNavigateToPandakindermoebelHomePage() {
+    @Given("User navigate to Pandakindermoebel home page")
+    public void userNavigateToPandakindermoebelHomePage() {
         Configuration.startMaximized =true;
         open(url);
 
@@ -21,8 +21,8 @@ public class HomePageAndRegSteps implements Locators {
 
     }
 
-    @When("User should be able to enter to Mein Konto and create a new Account")
-    public void userShouldBeAbleToEnterToMeinKontoAndCreateANewAccount() {
+    @When("User enter to Mein Konto and create a new Account")
+    public void userEnterToMeinKontoAndCreateANewAccount() {
 
         $(meinKonto).click();
         $(registrieren).shouldBe(Condition.appear).click();
@@ -34,8 +34,8 @@ public class HomePageAndRegSteps implements Locators {
     }
 
 
-    @Then("User should be able to enter his personal info")
-    public void userShouldBeAbleToEnterHisPersonalInfo() {
+    @Then("User enter his personal info")
+    public void userEnterHisPersonalInfo() {
 
         $(adressen).shouldBe(Condition.appear).click();
         $(edit).shouldBe(Condition.appear).click();
@@ -55,8 +55,8 @@ public class HomePageAndRegSteps implements Locators {
 
     }
 
-    @Then("User should not be able to record with the same Username")
-    public void userShouldNotBeAbleToRecordWithTheSameUsername() {
+    @Then("User record with the same Username")
+    public void userRecordWithTheSameUsername() {
 
         $(abmelden).shouldBe(Condition.appear).click();
         $(repeatReg).shouldBe(Condition.appear).click();
