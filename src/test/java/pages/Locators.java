@@ -55,12 +55,14 @@ public interface Locators {
     By anmelden = By.cssSelector("button[value='Anmelden']");
     By buttonSubmit = By.cssSelector("button[type='submit']");
 
+
     // Shop
     By categoryItem = By.cssSelector("li.category_item");  // todo $$
     By productImage = By.cssSelector("div.product-image");  // todo $$
     By productTitle = By.cssSelector("h3.product-title");  // todo $$
     By productAmount = By.cssSelector("span.price");  // todo $$
     By warenKorb = By.cssSelector("div.footer-section-inner");  // todo $$
+    By bestellen = By.cssSelector("button.button.alt");
 
 
     // WarenKorb
@@ -72,7 +74,7 @@ public interface Locators {
 
     // Kasse
 
-    By stimmen = By.xpath("//span[contains(@class,'checkbox')]");
+    By stimmen = By.xpath("//label[contains(@class,'checkbox')]");
     By postCard = By.cssSelector("button[onclick='classic()']");
     By cardId = By.cssSelector("input#cardId");
 

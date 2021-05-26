@@ -21,7 +21,7 @@ public class ShopSteps implements Locators {
         $(meldenUsername).setValue(email);
         $(meldenPassword).setValue(password);
         
-        $(anmelden);
+        $(anmelden,0).shouldBe(Condition.appear).click();
 
         $("html").shouldHave(Condition.text("Hi "+ username));
 
@@ -38,9 +38,13 @@ public class ShopSteps implements Locators {
         int randomCtgry = randomSayi($$(categoryItem).size());
         $$(categoryItem).get(randomCtgry).click();
 
-        int randomPrdct = randomSayi($$(productImage).size());
-        productName = $$(productTitle).get(randomPrdct).getText();
+//        int randomPrdct = randomSayi($$(productImage).size());
+        int randomPrdct = 11;
+        productName = $$(productTitle).get(randomPrdct).scrollTo().getText();
         productPrice = $$(productAmount).get(randomPrdct).getText();
+
+        System.out.println("productName = " + productName);
+        System.out.println("productPrice = " + productPrice);
 
         $$(productImage).get(randomPrdct).hover();
         $$(warenKorb).get(randomPrdct).click();
@@ -59,8 +63,12 @@ public class ShopSteps implements Locators {
     @Then("User should be able go to payment and complete order process")
     public void userShouldBeAbleGoToPaymentAndCompleteOrderProcess() {
 
-        $(stimmen).shouldBe(Condition.appear).click();
-        $(buttonSubmit,1).click();
+        $(buttonSubmit).scrollIntoView(false);
+        $(stimmen,1).shouldBe(Condition.appear).click();
+        $(bestellen).click();
+        $("html").shouldHave(Condition.text("E-Payment"));
+        $("html").shouldHave(Condition.text("Zahlung ausführen"));
+        $(postCard).click();
         $(cardId).shouldBe(Condition.appear).setValue("123456123456");
         $(buttonSubmit).click();
         $("html").shouldHave(Condition.text("Geben Sie bitte die ID-Nummer erneut ein."));
