@@ -35,7 +35,8 @@ public class ShopSteps implements Locators {
     @Then("User select random product type and product")
     public void userSelectRandomProductTypeAndProduct() {
 
-        int randomCtgry = randomSayi($$(categoryItem).size());
+//        int randomCtgry = randomSayi($$(categoryItem).size());
+        int randomCtgry = 3;
         $$(categoryItem).get(randomCtgry).click();
 
 //        int randomPrdct = randomSayi($$(productImage).size());
