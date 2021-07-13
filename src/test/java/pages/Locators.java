@@ -2,13 +2,16 @@ package pages;
 
 import org.openqa.selenium.By;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Random;
 
 public interface Locators {
 
     String url = "https://pandakindermoebel.ch/";
-    String username = "Test User15555";
-    String email = "testuser15555@techno.com";
+    String username = "Test User155555";
+    String email = "testuser155555@techno.com";
     String password = "Testuser.123";
     String vornameValue = "Test";
     String nachnameValue = "User";
@@ -94,4 +97,7 @@ public interface Locators {
 
         return index.nextInt(sayi - 1);
     }
+
+
+
 }

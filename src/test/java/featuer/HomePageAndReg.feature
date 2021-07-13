@@ -7,3 +7,5 @@ Feature: HomePage and Registrieren Functionality
     Then User enter his personal info
     Then User record with the same Username
     Then User should be able to access the contents of the menuitem
+
+
