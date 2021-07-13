@@ -18,8 +18,7 @@ public class MenuSteps extends MyMethods {
     @When("All links on the Website should be able be verified")
     public void allLinksOnTheWebsiteShouldBeAbleBeVerified() {
 
-        int linkSayisi = 0;
-        List<SelenideElement> links = $$(By.cssSelector("a"));
+        List<SelenideElement> links = $$(By.cssSelector("link"));
 
         System.out.println("Total links are " + links.size());
 
@@ -27,15 +26,15 @@ public class MenuSteps extends MyMethods {
             WebElement element = links.get(i);
             String url = element.getAttribute("href");
             verifyLink(url);
-            linkSayisi++;
 
         }
-        System.out.println("linkSayisi = " + linkSayisi);
+
     }
 
     @Then("All image on the Website should be able be verified")
     public void allImageOnTheWebsiteShouldBeAbleBeVerified() {
-        ElementsCollection productArr = $$("html");
-        productArr.forEach(e -> System.out.println(e.find("img").getAttribute("src")));
+        ElementsCollection productArr = $$("html img");
+        productArr.forEach(e -> System.out.println(e.getAttribute("src")));
+
     }
 }
