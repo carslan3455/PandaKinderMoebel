@@ -5,8 +5,8 @@ import org.openqa.selenium.By;
 public interface Locators {
 
     String url = "https://pandakindermoebel.ch/";
-    String username = "Test User155555";
-    String email = "testuser155555@techno.com";
+    String username = "Test User.1";
+    String email = "testuser.1@techno.com";
     String password = "Testuser.123";
     String vornameValue = "Test";
     String nachnameValue = "User";
