@@ -5,8 +5,18 @@ import pages.Locators;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Random;
 
 public class MyMethods implements Locators {
+
+    public int randomSayi(int sayi) {
+
+        // return  (int) (Math.random()*(sayi-1));
+
+        Random index = new Random();
+
+        return index.nextInt(sayi - 1);
+    }
 
     public boolean verifyLink(String url) {
 

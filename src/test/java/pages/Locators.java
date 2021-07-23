@@ -2,11 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Random;
-
 public interface Locators {
 
     String url = "https://pandakindermoebel.ch/";
@@ -89,14 +84,7 @@ public interface Locators {
 
 
 
-    default int randomSayi(int sayi) {
 
-        // return  (int) (Math.random()*(sayi-1));
-
-        Random index = new Random();
-
-        return index.nextInt(sayi - 1);
-    }
 
 
 

@@ -3,10 +3,7 @@ package stepDefs;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
+import io.cucumber.java.en.*;
 import pages.Locators;
 
 import static com.codeborne.selenide.Selenide.*;
